@@ -2,7 +2,12 @@
 
 
 <%@posts.each do |post|%>
+<div>
   <%="Date #{post.date}"%>
   <%="Rationale #{post.rationale}"%>
   <%= link_to 'Show', post_path(post) %>
+</div>
   <%end%>
+
+
+  <%= @post.inspect %>
