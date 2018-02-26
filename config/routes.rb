@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   namespace :admin do
     resources :users
-    resources :models
     resources :posts
     resources :admin_users
 
