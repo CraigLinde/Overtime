@@ -62,7 +62,7 @@ gem 'factory_bot_rails'
 gem 'gritter', '~> 1.2'
 gem 'administrate', '~> 0.9.0'
 gem 'bourbon', '~> 5.0'
-
+gem 'pundit', '~> 1.1'
 
 
 
