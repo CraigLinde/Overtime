@@ -10,8 +10,12 @@ puts "1 AdminUser created"
 puts "1 User created"
 
 
-100.times do |post|
-  Post.create!(date:Date.today, rationale: "#{post} Just Cuz", user_id: @user.id)
+50.times do |post|
+  Post.create!(date:Date.today, rationale: "#{post} Just Cuz", user_id: 1)
+end
+
+50.times do |post|
+  Post.create!(date:Date.today, rationale: "#{post} Just Cuz", user_id: 2)
 end
 
 puts "100 posts were created"
