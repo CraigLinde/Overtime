@@ -11,11 +11,11 @@ puts "1 User created"
 
 
 50.times do |post|
-  Post.create!(date:Date.today, rationale: "#{post} Just Cuz", user_id: 1)
+  Post.create!(date:Date.today, rationale: "#{post} Just Cuz", user_id: 1, status: 'submitted')
 end
 
 50.times do |post|
-  Post.create!(date:Date.today, rationale: "#{post} Just Cuz", user_id: 2)
+  Post.create!(date:Date.today, rationale: "#{post} Just Cuz", user_id: 2, status: 'approved')
 end
 
 puts "100 posts were created"
