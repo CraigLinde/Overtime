@@ -6,4 +6,6 @@ validates_presence_of :date, :rationale
 
 scope :posts_by, ->(user){where(user_id: user.id)}
 
+
+
 end
