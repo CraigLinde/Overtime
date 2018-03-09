@@ -23,17 +23,12 @@ AuditLog.create!(user_id: @user.id, status: 0, start_date: (Date.today - 6.days)
 AuditLog.create!(user_id: @user.id, status: 0, start_date: (Date.today - 13.days))
 AuditLog.create!(user_id: @user.id, status: 0, start_date: (Date.today - 20.days))
 
+puts "3 audit logs have been created"
 
-puts "3 Audit Logs were created"
-
-50.times do |post|
-  Post.create!(date:Date.today, rationale: "#{post} Just Cuz", user_id: 1, status: 'submitted', overtime_request: 2.5)
+100.times do |post|
+    Post.create!(date: Date.today, rationale: "#{post} rationale", user_id: @user.id, overtime_request: 2.5)
 end
 
-50.times do |post|
-  Post.create!(date:Date.today, rationale: "#{post} Just Cuz", user_id: 2, status: 'approved', overtime_request: 2.5)
-end
-
-puts "100 posts were created"
+puts "100 Posts have been created"
 
 
