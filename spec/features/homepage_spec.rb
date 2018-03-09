@@ -1,3 +1,4 @@
+
 require 'rails_helper'
 
 describe 'Homepage' do
@@ -9,12 +10,12 @@ describe 'Homepage' do
     visit root_path
 
     click_on("approve_#{post.id}")
-    expect(post.reload.status).to eq("approved")
-
+    
+    expect(post.reload.status).to eq('approved')
   end
 
-  it 'allows the employee to change the audit log status from the home page' do
-    post = FactoryBot.create(:audit_log)
+  it 'allows the employee to change the audit log status from the homepage' do
+    audit_log = FactoryBot.create(:audit_log)
     user = FactoryBot.create(:user)
     login_as(user, :scope => :user)
 
@@ -23,7 +24,7 @@ describe 'Homepage' do
     visit root_path
 
     click_on("confirm_#{audit_log.id}")
-    expect(post.reload.status).to eq("confirmed")
-
+    
+    expect(audit_log.reload.status).to eq('confirmed')
   end
 end
